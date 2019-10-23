@@ -1,0 +1,20 @@
+# 1 - A list of devices you want to take the screenshots from
+devices([
+  "iPhone 8",
+  "iPhone X"
+])
+ 
+# 2 - A list of supported languages
+languages([
+  'en-US',
+  'fr-FR'
+])
+ 
+# 3 - The name of the scheme which contains the UI Tests
+scheme(ENV['TEST_SCHEME'])
+
+# 4 - Where should the resulting screenshots be stored?
+output_directory "./fastlane/screenshots/#{ENV['SCHEME']}"
+ 
+# 5 - Clears previous screenshots
+clear_previous_screenshots(true)
